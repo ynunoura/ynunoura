@@ -1,0 +1,131 @@
+body, html {
+  height: 100%;
+  font-family: 'Space Mono', monospace;
+}
+/*================
+  NAVIGATION
+=================*/
+.brand a {
+    color: #AD974F;
+    margin: 5%;
+    font-size: 2em;
+    text-decoration: none;
+}
+
+.menu {
+  position: absolute;
+  right: 0;
+  margin: 3.5%;
+  cursor: pointer;
+  color: #AD974F;
+}
+
+.menu fa {
+  color: #AD974F;
+}
+/* Nav style */
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.95);
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.overlay a {
+  padding-top: 80px;
+  text-decoration: none;
+  font-size: 65px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+  text-align: center;
+}
+
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+    position: absolute;
+    top: -55px;
+    right: 5px;
+    font-size: 60px;
+}
+
+
+/*================
+  Basic Styles
+=================*/
+.button {
+  padding: 25px 35px;
+  margin: 10px 30px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.intro-button {
+  background-color: transparent;
+  border: 3px solid #EAEAEA;
+  padding: 25px 50px!important;
+}
+
+.intro-button-2 {
+  background-color: #AD974F;
+  border: none;
+  margin-bottom:
+}
+
+hr {
+  width: 30px;
+  border: 5px solid #EAEAEA;
+}
+
+/*==================
+    Home Styles
+====================*/
+
+.intro {
+  background-color: rgb(20, 20, 20);
+  height: 100%;
+  color: #EAEAEA;
+  padding-top: 10%;
+}
+
+.intro .content {
+  margin: 0 auto;
+  text-align: center;
+
+}
+
+.intro h1 {
+  font-size: 60px;
+}
+
+/*=================
+  MEDIA QUERIES
+==================*/
+@media screen and (min-width: 600px){
+  .intro {
+    padding-top: 5%;
+  }
+
+  .intro h1 {
+    font-size: 90px;
+  }
+
+  .intro h3 {
+    font-size: 3em;
+  }
+
+  .menu {
+    right: 0;
+    top: 20px;
+  }
+}
