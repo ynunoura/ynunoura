@@ -2,6 +2,10 @@ body, html {
   height: 100%;
   font-family: 'Space Mono', monospace;
 }
+
+::selection {
+  background-color: #AD974F;
+}
 /*================
   NAVIGATION
 =================*/
@@ -14,15 +18,13 @@ body, html {
 
 .menu {
   position: absolute;
-  right: 0;
-  margin: 3.5%;
+  right: 15px;
+  top: auto;
   cursor: pointer;
   color: #AD974F;
+  font-size: 2em;
 }
 
-.menu fa {
-  color: #AD974F;
-}
 /* Nav style */
 .overlay {
   height: 100%;
@@ -35,10 +37,11 @@ body, html {
   background-color: rgba(0,0,0, 0.95);
   overflow: hidden;
   transition: 0.5s;
+  text-align: center;
 }
 
 .overlay a {
-  padding-top: 80px;
+  padding-top: 70px;
   text-decoration: none;
   font-size: 65px;
   color: #818181;
@@ -48,18 +51,30 @@ body, html {
 }
 
 .overlay a:hover, .overlay a:focus {
-    color: #f1f1f1;
+    color: #AD974F;
 }
 
 /* Position the close button (top right corner) */
 .overlay .closebtn {
     position: absolute;
-    top: -55px;
-    right: 5px;
-    font-size: 60px;
+    top: -70px;
+    right: 10px;
+    font-size: 70px;
 }
 
+ul.social {
+  padding-top: 40px;
+}
 
+ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 0 30px;
+}
+
+ul li .fa {
+  font-size: 2.5em;
+}
 /*================
   Basic Styles
 =================*/
@@ -94,7 +109,7 @@ hr {
 .intro {
   background-color: rgb(20, 20, 20);
   height: 100%;
-  color: #EAEAEA;
+  color: #DCD0D0;
   padding-top: 10%;
 }
 
@@ -106,6 +121,37 @@ hr {
 
 .intro h1 {
   font-size: 60px;
+}
+
+#webDev {
+  font-size: 2em;
+}
+
+/* make keyframes that tell the start state and the end state of our object */
+
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+.fade-in {
+	opacity:0;  /* make things invisible upon start */
+	-webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+	-moz-animation:fadeIn ease-in 1;
+	animation:fadeIn ease-in 1;
+
+	-webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+	-moz-animation-fill-mode:forwards;
+	animation-fill-mode:forwards;
+
+	-webkit-animation-duration:1s;
+	-moz-animation-duration:1s;
+	animation-duration:1s;
+}
+
+.fade-in.one {
+-webkit-animation-delay: 0.3s;
+-moz-animation-delay: 0.3s;
+animation-delay: 0.3s;
 }
 
 /*=================
@@ -120,12 +166,25 @@ hr {
     font-size: 90px;
   }
 
-  .intro h3 {
+  #webDev {
     font-size: 3em;
   }
 
   .menu {
-    right: 0;
-    top: 20px;
+    right: 50px;
+    top: 60px;
   }
-}
+
+  .overlay .closebtn {
+      position: absolute;
+      top: -55px;
+      right: 30px;
+      font-size: 80px;
+  }
+
+  ul.social {
+    text-align: center;
+  }
+
+
+/*=== FADE IN ANIMATIONS ===*/
